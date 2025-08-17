@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>垃圾城改造计划 | Hope Factory</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <div class="brand">Hope Factory</div>
+      <nav class="links">
+        <a href="#about">现状</a>
+        <a href="#solution">方案</a>
+        <a href="#impact">成效</a>
+        <a href="#join">参与</a>
+      </nav>
+      <button id="ctaTop" class="btn">立即支持</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero__inner">
+      <h1>埃及“垃圾城”改造计划</h1>
+      <p>从垃圾到资源，从绝望到希望。我们用分类、回收、就业与教育，重塑一座城的生态与尊严。</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#join">我愿参与</a>
+        <a class="btn btn--ghost" href="#solution">了解方案</a>
+      </div>
+      <div class="hero__stats">
+        <div><strong id="stat1">0</strong><span>吨垃圾/天可处理</span></div>
+        <div><strong id="stat2">0</strong><span>个稳定岗位</span></div>
+        <div><strong id="stat3">0</strong><span>名儿童受教育</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>现状问题</h2>
+      <div class="grid-3">
+        <article class="card">
+          <h3>垃圾堆积</h3>
+          <p>生活垃圾无序倾倒，异味与病媒滋生，居民健康受威胁。</p>
+        </article>
+        <article class="card">
+          <h3>收入不稳</h3>
+          <p>拾荒者收入极不稳定，缺少安全与保障，家庭教育被迫牺牲。</p>
+        </article>
+        <article class="card">
+          <h3>资源浪费</h3>
+          <p>可回收物未被系统化利用，错失经济与环境双重价值。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="solution" class="section section--alt">
+    <div class="container">
+      <h2>我们的解决方案</h2>
+      <div class="timeline">
+        <div class="step">
+          <span class="tag">01</span>
+          <h4>源头分类与上门收运</h4>
+          <p>部署分类点与智能秤，按量结算，鼓励居民参与。</p>
+        </div>
+        <div class="step">
+          <span class="tag">02</span>
+          <h4>分选中心与再生工坊</h4>
+          <p>半自动分拣 + 手工精分，塑料、金属、纸张进入再生流程。</p>
+        </div>
+        <div class="step">
+          <span class="tag">03</span>
+          <h4>有机物就地资源化</h4>
+          <p>厨余做堆肥/厌氧产气，服务城市绿化与能源补充。</p>
+        </div>
+        <div class="step">
+          <span class="tag">04</span>
+          <h4>就业与教育闭环</h4>
+          <p>提供岗位与保险，设立儿童学习中心，打破贫困代际传递。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="impact" class="section">
+    <div class="container">
+      <h2>预期成效</h2>
+      <div class="grid-3">
+        <div class="metric">
+          <div class="metric__num">≥ 60%</div>
+          <div class="metric__text">减量化</div>
+        </div>
+        <div class="metric">
+          <div class="metric__num">≥ 45%</div>
+          <div class="metric__text">资源化率</div>
+        </div>
+        <div class="metric">
+          <div class="metric__num">200+</div>
+          <div class="metric__text">新增就业</div>
+        </div>
+      </div>
+      <p class="note">数据以首年试点为基线，随规模扩大逐步提升。</p>
+    </div>
+  </section>
+
+  <section id="join" class="section section--alt">
+    <div class="container">
+      <h2>你可以这样参与</h2>
+      <div class="grid-3">
+        <article class="card">
+          <h3>捐助设备</h3>
+          <p>车辆、打包机、分拣台、智能秤等，一次投入长期受益。</p>
+          <a class="btn btn--primary" href="#" onclick="openForm('捐助设备')">我要捐助</a>
+        </article>
+        <article class="card">
+          <h3>企业合作</h3>
+          <p>环保企业、超市、园区共建回收网络，分享收益。</p>
+          <a class="btn" href="#" onclick="openForm('企业合作')">商务对接</a>
+        </article>
+        <article class="card">
+          <h3>志愿者</h3>
+          <p>宣教、数据记录、儿童课堂支持，周末即可参与。</p>
+          <a class="btn" href="#" onclick="openForm('志愿者')">报名志愿</a>
+        </article>
+      </div>
+
+      <form id="contactForm" class="contact hidden" onsubmit="submitForm(event)">
+        <h3 id="formTitle">联系表单</h3>
+        <label>你的姓名<input required name="name" placeholder="张三" /></label>
+        <label>邮箱<input required type="email" name="email" placeholder="you@example.com" /></label>
+        <label>留言<textarea name="message" placeholder="我想参与……"></textarea></label>
+        <button class="btn btn--primary" type="submit">提交</button>
+        <p id="formMsg" class="formMsg"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Hope Factory · 联系：hello@hopefactory.example</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
